@@ -11,3 +11,8 @@
 * vlc
 ## 実行方法
 
+
+以下コマンドで、導入しておく
+```
+sudo apt update && sudo apt upgrade -y && sudo apt install ansible git curl ssh -y
+```

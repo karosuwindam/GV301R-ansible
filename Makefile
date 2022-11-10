@@ -9,7 +9,7 @@ kubernetes:
 containerd:
 	$(ANSIBLE_CMD) containerd.yml
 oscheck:
-	$(ANSIBLE_CMD) check.yml
+	$(ANSIBLE_CMD) check.yml --ask-become-pass
 go:
 	$(ANSIBLE_CMD) go.yml
 docker:
