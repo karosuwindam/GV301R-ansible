@@ -1,0 +1,6 @@
+- name: echo boot file
+  shell: cat /boot/cmdline.txt
+  register: bootcmd
+- name: change boot file
+  shell: sed -i 's/$/ cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory/g' /boot/cmdline.txt
+  when: "'cgroup_enable=cpuset' not in bootcmd.stdout"

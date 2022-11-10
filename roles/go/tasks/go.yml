@@ -1,0 +1,15 @@
+- name: go download
+  unarchive:
+    src: https://go.dev/dl/go{{ go.version }}.linux-arm64.tar.gz
+    dest: /usr/local
+    remote_src: yes
+
+- name: read bashrc
+  shell: cat /home/{{ ansible_ssh_user }}/.bashrc
+  register: bashrc
+- name: pass add
+  lineinfile:
+    path: /home/{{ ansible_ssh_user }}/.bashrc
+    regexp: '^export PATH='
+    line: 'export PATH=$PATH:/usr/local/go/bin'
+  when: "'/usr/local/go/bin' not in bashrc.stdout"

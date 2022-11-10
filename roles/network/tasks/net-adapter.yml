@@ -1,0 +1,7 @@
+- name: net adapter setup
+  template:
+    src: ./templates/k8s.conf
+    dest: /etc/sysctl.d/k8s.conf
+    backup: false
+- name: net adapter system reload
+  shell: sysctl --system

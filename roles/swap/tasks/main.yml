@@ -1,0 +1,7 @@
+- name: stop swapfile
+  shell: dphys-swapfile swapoff
+- name: stop service swapfile
+  systemd:
+    name: dphys-swapfile
+    state: stopped
+    enabled: false

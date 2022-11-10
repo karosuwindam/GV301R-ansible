@@ -1,0 +1,8 @@
+- name: apt isntall library
+  apt:
+    name:
+      - apt-transport-https
+      - libseccomp2 
+      - libseccomp-dev
+      - btrfs-progs
+      - libbtrfs-dev

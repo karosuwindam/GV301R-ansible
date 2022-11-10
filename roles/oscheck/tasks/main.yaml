@@ -1,0 +1,11 @@
+- name: OS Version view
+  debug:
+    msg: "{{ ansible_distribution }} {{ ansible_distribution_major_version }} {{ ansible_architecture }}"
+
+- name: OS Fail
+  fail:
+    msg: "OS arch not {{ ansible_architecture }}"
+  when:
+    ansible_architecture != "{{ os.arch }}" or
+    ansible_distribution != "{{ os.dist }}"
+  

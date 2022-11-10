@@ -1,0 +1,30 @@
+- name: Add Kubernetes keyring
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add kubernetes repositories
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  with_items:
+    - deb https://apt.kubernetes.io/ kubernetes-xenial main
+
+- name: Install k8s-app
+  apt:
+    name: "{{ item }}={{k8s.version}}"
+  with_items:
+    - kubectl
+    - kubelet
+    - kubeadm
+
+- name: Apt Mark
+  dpkg_selections:
+    name: "{{ item }}"
+    selection: hold
+  with_items:
+    - kubectl
+    - kubelet
+    - kubeadm
+  
+  

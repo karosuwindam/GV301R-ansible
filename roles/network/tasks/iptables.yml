@@ -1,0 +1,26 @@
+- name: apt isntall iptables
+  apt:
+    name:
+      - iptables
+      - arptables
+      - ebtables
+
+- name: set up legacy iptables
+  alternatives:
+    name: iptables
+    path: /usr/sbin/iptables-legacy
+
+- name: set up legacy ip6tables
+  alternatives:
+    name: ip6tables
+    path: /usr/sbin/ip6tables-legacy
+
+- name: set up legacy arptables
+  alternatives:
+    name: arptables
+    path: /usr/sbin/arptables-legacy
+
+- name: set up legacy ebtables
+  alternatives:
+    name: ebtables
+    path: /usr/sbin/ebtables-legacy
