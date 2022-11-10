@@ -1,0 +1,5 @@
+- hosts: localhost
+  vars_files:
+    - vars/all/secrets.yml
+  roles:
+    - chrome

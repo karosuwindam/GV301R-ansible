@@ -1,6 +1,6 @@
 - name: go download
   unarchive:
-    src: https://go.dev/dl/go{{ go.version }}.linux-arm64.tar.gz
+    src: https://go.dev/dl/go{{ go.version }}.linux-{{ go.arch }}.tar.gz
     dest: /usr/local
     remote_src: yes
 
