@@ -1,5 +1,10 @@
 - hosts: localhost
+  become: yes
+  become_method: sudo
   vars_files:
     - vars/all/secrets.yml
   roles:
-    - chrome
+    - oscheck
+    - install
+    - game
+    - message

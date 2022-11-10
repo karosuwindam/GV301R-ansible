@@ -1,16 +1,7 @@
 ANSIBLE_CMD := ANSIBLE_STDOUT_CALLBACK=yaml ANSIBLE_LOG_PATH=logs/install.`date +%Y%m%d%H%M%S`.log ansible-playbook -i inventory/hosts
+ANSIBLE_OPSION := --ask-become-pass
 
 install:
-	$(ANSIBLE_CMD) install.yml
-
-
-kubernetes:
-	$(ANSIBLE_CMD) kubernetes.yml
-containerd:
-	$(ANSIBLE_CMD) containerd.yml
+	$(ANSIBLE_CMD) install.yml $(ANSIBLE_OPSION)
 oscheck:
-	$(ANSIBLE_CMD) check.yml --ask-become-pass
-go:
-	$(ANSIBLE_CMD) go.yml
-docker:
-	$(ANSIBLE_CMD) docker.yml
+	$(ANSIBLE_CMD) check.yml $(ANSIBLE_OPSION)
