@@ -14,5 +14,5 @@
 
 以下コマンドで、導入しておく
 ```
-sudo apt update && sudo apt upgrade -y && sudo apt install ansible git curl ssh -y
+sudo apt update && sudo apt upgrade -y && sudo apt install ansible make git curl ssh -y
 ```
