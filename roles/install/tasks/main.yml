@@ -1,0 +1,11 @@
+- name: vscode
+  incloude: ./vscode.yml
+
+- name: golang
+  incloude: ./golang.yml
+
+- name: chrome
+  incloude: ./chrome.yml
+
+- name: docker
+  incloud: ./docker.yml

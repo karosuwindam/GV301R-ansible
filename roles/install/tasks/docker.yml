@@ -1,0 +1,8 @@
+- name: install docker
+  apt:
+    name:
+      - docker.io
+- name: group update
+  user:
+    name: "{{ ansible_ssh_user }}"
+    groups: docker
