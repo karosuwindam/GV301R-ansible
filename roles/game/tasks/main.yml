@@ -1,2 +1,4 @@
 - name: steam
-  include: steam.yml
+  include: ./steam.yml
+- name: retoarch
+  include: ./retroarch.yml
