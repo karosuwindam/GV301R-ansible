@@ -1,1 +1,19 @@
-- name: discord
+- name: Download latest Discord DEB file and install it
+  tags: updates-only
+  block:
+    # Download the latest Zoom Ubuntu 14.04+ 64-bit client
+    - name: "Download official Discord DEB file"
+      ansible.builtin.get_url:
+        url: "{{ discord.deb_url }}"
+        dest: /var/cache/apt/archives/
+      register: zoom_debfile
+
+    # # For the sake of completeness we can import the Zoom PGP-key
+    # - name: Add the Zoom PGP key
+    #   ansible.builtin.apt_key:
+    #     url: https://zoom.us/linux/download/pubkey
+    #     state: present
+
+    - name: Install Discord client
+      ansible.builtin.apt:
+        deb: "{{ zoom_debfile.dest }}"
