@@ -1,0 +1,3 @@
+- name: vlc install
+  apt:
+    name: vlc

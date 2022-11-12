@@ -9,6 +9,9 @@
 * steam
 * Chrome
 * vlc
+* Golang
+* Docker
+* virtualbox
 ## 実行方法
 
 
@@ -16,3 +19,4 @@
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install ansible make git curl ssh -y
 ```
+
