@@ -6,5 +6,5 @@
   roles:
     - oscheck
     - install
-    - game
-    - message
+    # - game
+    # - message
