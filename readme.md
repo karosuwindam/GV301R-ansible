@@ -20,3 +20,9 @@
 sudo apt update && sudo apt upgrade -y && sudo apt install ansible make git curl ssh -y
 ```
 
+```
+git clone https://github.com/karosuwindam/GV301R-ansible.git
+cd GV301R-ansibe
+make install
+```
+
