@@ -1,6 +1,6 @@
 - name: slack
-  include: ./discode.yml
+  include: ./slack.yml
 - name: zoom
-  include: ./discode.yml
+  include: ./zoom.yml
 - name: discord
   include: ./discord.yml
