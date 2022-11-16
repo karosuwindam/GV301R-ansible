@@ -1,5 +1,6 @@
 - name: install docker
   apt:
+    update_cache: yes
     name:
       - docker.io
 - name: group update

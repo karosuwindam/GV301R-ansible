@@ -1,4 +1,6 @@
-- name: steam
-  include: ./steam.yml
+# - name: steam
+#   include: ./steam.yml
 - name: retoarch
   include: ./retroarch.yml
+- name: vlc
+  include: ./vlc.yml

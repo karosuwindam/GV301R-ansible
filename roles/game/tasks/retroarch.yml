@@ -1,3 +1,4 @@
 - name: RetoArch install
   apt:
+    update_cache: yes
     name: retroarch
