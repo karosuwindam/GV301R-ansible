@@ -1,0 +1,10 @@
+- name: create Directory
+  file:
+    path: /home/{{ ansible_ssh_user }}/{{ appimage.folder }}
+- block:
+  - name: install lib
+    apt:
+      name: libfuse2
+      update_cache: yes
+  become: yes
+  become_method: sudo

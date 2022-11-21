@@ -1,11 +1,19 @@
 - name: vscode
   include: ./vscode.yml
+  become: yes
+  become_method: sudo
 
 - name: golang
   include: ./golang.yml
+  become: yes
+  become_method: sudo
 
 - name: chrome
   include: ./chrome.yml
+  become: yes
+  become_method: sudo
 
 - name: docker
   include: ./docker.yml
+  become: yes
+  become_method: sudo

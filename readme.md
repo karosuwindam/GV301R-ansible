@@ -6,18 +6,28 @@
 * Slack
 * Zoom
 * Discode
-* steam
 * Chrome
 * vlc
 * Golang
 * Docker
+* NextCloud Desktop Client
+
+未設定
+* Steam
 * virtualbox
+
 ## 実行方法
 
 
 以下コマンドで、導入しておく
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install ansible make git curl ssh -y
+```
+
+以下のコマンドで実行できるようにする。
+```
+ssh-keygen
+ssh-copy-id localhost
 ```
 
 ```
