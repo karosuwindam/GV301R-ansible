@@ -5,7 +5,7 @@
   changed_when: false
 - name: Download Virtualbox
   get_url:
-    url: {{ virtualbox.deb_url }}
+    url: "{{ virtualbox.deb_url }}"
     dest: /tmp/{{ virtualbox.name }}
   when: check_virtualbox.rc == 1
 - name: Install Virtualbox
