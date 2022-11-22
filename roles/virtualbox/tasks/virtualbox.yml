@@ -8,8 +8,3 @@
     url: "{{ virtualbox.deb_url }}"
     dest: /tmp/{{ virtualbox.name }}
   when: check_virtualbox.rc == 1
-- name: Install Virtualbox
-  command: gdebi --non-interactive /tmp/{{ virtualbox.name }}.deb
-  become: yes
-  become_method: sudo
-  when: check_virtualbox.rc == 1
