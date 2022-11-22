@@ -1,10 +1,11 @@
 - name: download nextcloud
   get_url:
     url: https://github.com/nextcloud/desktop/releases/download/v{{ appimage.nextcloud.version }}/Nextcloud-{{ appimage.nextcloud.version }}-x86_64.AppImage
-    dest: /home/{{ ansible_ssh_user }}/{{ appimage.folder }}
+    dest: /home/{{ ansible_ssh_user }}/{{ appimage.folder }}/Nextcloud-{{ appimage.nextcloud.version }}-x86_64.AppImage
+    mode: '0764'
 # Nextcloud-{{ appimage.nextcloud.version }}-x86_64.AppImage
-- name: add nextcloud app return
-  file:
-    path: /home/{{ ansible_ssh_user }}/{{ appimage.folder }}/Nextcloud-{{ appimage.nextcloud.version }}-x86_64.AppImage
-    mode: 0764
+# - name: add nextcloud app return
+#   file:
+#     path: /home/{{ ansible_ssh_user }}/{{ appimage.folder }}/Nextcloud-{{ appimage.nextcloud.version }}-x86_64.appimage
+#     mode: 0764
   
