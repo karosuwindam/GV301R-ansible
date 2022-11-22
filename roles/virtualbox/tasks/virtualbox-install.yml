@@ -4,5 +4,5 @@
   failed_when: false
   changed_when: false
 - name: Install Virtualbox
-  command: gdebi --non-interactive /tmp/{{ virtualbox.name }}.deb
+  command: gdebi --non-interactive /tmp/{{ virtualbox.name }}
   when: check_virtualbox.rc == 1
