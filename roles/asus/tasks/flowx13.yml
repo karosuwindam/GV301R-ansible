@@ -1,4 +1,5 @@
 - name: check
   debug:
     msg: "{{check_hard.stdout}}" 
-  when: "'VirtualBox' not in check_hard.stdout"
+  when: "'ROG Flow X13' not in check_hard.stdout"
+# - name
