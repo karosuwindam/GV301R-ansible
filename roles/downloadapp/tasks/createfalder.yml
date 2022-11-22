@@ -1,6 +1,7 @@
 - name: create Directory
   file:
     path: /home/{{ ansible_ssh_user }}/{{ appimage.folder }}
+    state: directory
 - block:
   - name: install lib
     apt:
