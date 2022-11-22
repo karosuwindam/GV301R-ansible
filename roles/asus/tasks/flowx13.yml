@@ -2,4 +2,16 @@
   debug:
     msg: "{{check_hard.stdout}}" 
   when: "'ROG Flow X13' not in check_hard.stdout"
-# - name
+- name: download ROG Flow X13 pach
+  git:
+    repo: "{{ hard.asus.regflowx13.repo_url }}"
+    dest: /home/{{ ansible_ssh_user }}/
+  when: "'ROG Flow X13' in check_hard.stdout"
+- name: run Flow X13 install
+  command:
+    cmd: 'sh install.sh'
+    chdir: /home/{{ ansible_ssh_user }}/asus-flow-x13-linux
+  become: yes
+  become_method: sudo
+  when: "'ROG Flow X13' in check_hard.stdout"
+  
