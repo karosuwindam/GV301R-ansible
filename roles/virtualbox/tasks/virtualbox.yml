@@ -1,4 +1,13 @@
-- name: install virtualbox
-  apt:
-    update_cache: yes
-    name: virtualbox
+- name: Check if slack is installed
+  command: dpkg-query -W virtualbox
+  register: check_virtualbox
+  failed_when: false
+  changed_when: false
+- name: Download Virtualbox
+  get_url:
+    url: {{ virtualbox.deb_url }}
+    dest: /tmp/{{ virtualbox.name }}
+  when: check_virtualbox.rc == 1
+- name: Install Virtualbox
+  command: gdebi --non-interactive /tmp/{{ virtualbox.name }}.deb
+  when: check_virtualbox.rc == 1
