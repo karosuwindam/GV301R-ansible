@@ -7,3 +7,4 @@
   user:
     name: "{{ ansible_ssh_user }}"
     groups: docker
+    append: yes

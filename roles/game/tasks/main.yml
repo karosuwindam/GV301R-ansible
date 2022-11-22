@@ -2,5 +2,9 @@
 #   include: ./steam.yml
 - name: retoarch
   include: ./retroarch.yml
+  become: yes
+  become_method: sudo
 - name: vlc
   include: ./vlc.yml
+  become: yes
+  become_method: sudo
