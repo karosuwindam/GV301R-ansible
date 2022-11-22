@@ -1,3 +1,4 @@
 - name: check
   debug:
-    msg: "{{check_hard}}" 
+    msg: "{{check_hard.stdout}}" 
+  when: "'VirtualBox' not in bashrc.stdout"
