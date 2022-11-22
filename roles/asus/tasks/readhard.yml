@@ -1,0 +1,6 @@
+- name: Read Hard
+  command: dmidecode --type system
+  register: check_hard
+  failed_when: false
+  changed_when: false
+  
