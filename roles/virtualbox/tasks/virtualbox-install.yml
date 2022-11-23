@@ -3,8 +3,6 @@
   register: check_virtualbox
   failed_when: false
   changed_when: false
-- name: Download Virtualbox
-  get_url:
-    url: "{{ virtualbox.deb_url }}"
-    dest: /tmp/{{ virtualbox.name }}
+- name: Install Virtualbox
+  command: gdebi --non-interactive /tmp/{{ virtualbox.name }}
   when: check_virtualbox.rc == 1

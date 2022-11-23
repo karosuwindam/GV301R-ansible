@@ -1,0 +1,4 @@
+- include: ./readhard.yml
+  become: yes
+  become_method: sudo
+- include: ./flowx13.yml

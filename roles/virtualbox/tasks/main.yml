@@ -1,1 +1,4 @@
 - include: ./virtualbox.yml
+- include: ./virtualbox-install.yml
+  become: yes
+  become_method: sudo

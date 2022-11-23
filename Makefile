@@ -7,3 +7,6 @@ oscheck:
 	$(ANSIBLE_CMD) check.yml $(ANSIBLE_OPSION)
 virtualbox:
 	$(ANSIBLE_CMD) virtualbox.yml $(ANSIBLE_OPSION)
+hard:
+	$(ANSIBLE_CMD) hard.yml $(ANSIBLE_OPSION)
+
