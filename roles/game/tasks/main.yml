@@ -1,5 +1,7 @@
-# - name: steam
-#   include: ./steam.yml
+- name: steam
+  include: ./steam.yml
+  become: yes
+  become_method: sudo
 - name: retoarch
   include: ./retroarch.yml
   become: yes
