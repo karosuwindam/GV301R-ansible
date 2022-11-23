@@ -1,4 +1,0 @@
-- name: install virtualbox
-  apt:
-    update_cache: yes
-    name: virtualbox
