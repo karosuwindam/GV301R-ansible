@@ -11,10 +11,11 @@
 * Golang
 * Docker
 * NextCloud Desktop Client
+* virtualbox
+* asus setup
 
 未設定
 * Steam
-* virtualbox
 
 ## 実行方法
 

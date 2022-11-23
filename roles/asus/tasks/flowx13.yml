@@ -1,17 +1,23 @@
-- name: check
+- name: other message check hard
   debug:
     msg: "{{check_hard.stdout}}" 
   when: "'ROG Flow X13' not in check_hard.stdout"
+- name: check sleep data file
+  stat:
+    path: /usr/lib/systemd/system-sleep/asus-flow-x13-keyboard.sleep
+  register: asus_flow_x13
 - name: download ROG Flow X13 pach
   git:
     repo: "{{ hard.asus.regflowx13.repo_url }}"
-    dest: /home/{{ ansible_ssh_user }}/
-  when: "'ROG Flow X13' in check_hard.stdout"
+    dest: /home/{{ ansible_ssh_user }}/asus-flow-x13-linux
+  become: yes
+  become_user: "{{ ansible_ssh_user }}"
+  when: "'ROG Flow X13' in check_hard.stdout and not asus_flow_x13.stat.exists"
 - name: run Flow X13 install
   command:
     cmd: 'sh install.sh'
     chdir: /home/{{ ansible_ssh_user }}/asus-flow-x13-linux
   become: yes
   become_method: sudo
-  when: "'ROG Flow X13' in check_hard.stdout"
+  when: "'ROG Flow X13' in check_hard.stdout and not asus_flow_x13.stat.exists"
   

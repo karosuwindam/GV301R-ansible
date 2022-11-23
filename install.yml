@@ -4,6 +4,7 @@
   roles:
     - oscheck
     - install
+    - asus
     - game
     - message
     - downloadapp
