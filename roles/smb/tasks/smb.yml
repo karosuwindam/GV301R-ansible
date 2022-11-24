@@ -3,3 +3,14 @@
     update_cache: yes
     name:
     - samba
+
+- name: copy file
+  copy:
+    src: "../templates/smb.conf"
+    dest: "/etc/samba/smb.conf"
+    backup: yes
+
+- name: restart samba
+  systemd:
+    name: smbd
+    state: restarted
