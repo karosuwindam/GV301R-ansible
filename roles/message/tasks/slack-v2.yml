@@ -1,0 +1,10 @@
+- name: Check if slack is installed
+  command: dpkg-query -W slack
+  register: check_slack
+  failed_when: false
+  changed_when: false
+- name: Snap install slack
+  snap:
+    name:
+    - slack
+  when: check_slack.rc == 1

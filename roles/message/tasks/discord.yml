@@ -1,3 +1,8 @@
+---
+- name: apt-get update
+  apt: update_cache=true cache_valid_time=3600
+- name: install gdebi
+  apt: name=gdebi
 - name: Download latest Discord DEB file and install it
   tags: updates-only
   block:

@@ -1,7 +1,7 @@
-# - name: slack
-#   include: ./slack.yml
-#   become: yes
-#   become_method: sudo
+- name: slack
+  include: ./slack-v2.yml
+  become: yes
+  become_method: sudo
 - name: zoom
   include: ./zoom.yml
   become: yes
