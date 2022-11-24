@@ -3,6 +3,7 @@
     update_cache: yes
     name:
       - docker.io
+      - docker-compose
 - name: group update
   user:
     name: "{{ ansible_ssh_user }}"

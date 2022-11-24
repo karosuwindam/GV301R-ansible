@@ -10,3 +10,7 @@
   include: ./vlc.yml
   become: yes
   become_method: sudo
+- name: vlc
+  include: ./videolib.yml
+  become: yes
+  become_method: sudo

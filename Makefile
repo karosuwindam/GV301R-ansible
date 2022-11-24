@@ -7,3 +7,5 @@ oscheck:
 	$(ANSIBLE_CMD) check.yml $(ANSIBLE_OPSION)
 smb:
 	$(ANSIBLE_CMD) install-smb.yml $(ANSIBLE_OPSION)
+game:
+	$(ANSIBLE_CMD) install-game.yml $(ANSIBLE_OPSION)
