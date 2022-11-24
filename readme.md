@@ -14,6 +14,7 @@
 * virtualbox
 * Steam
 * asus setup
+* GSreamer
 
 ## 実行方法
 
