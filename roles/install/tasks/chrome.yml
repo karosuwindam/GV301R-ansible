@@ -9,7 +9,7 @@
     state: present
     filename: google-chrome
   with_items:
-    - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    - deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
 - name: Install google-chrome-stable
   apt:
     name: "google-chrome-stable"
