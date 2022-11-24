@@ -3,10 +3,4 @@
     - vars/all/secrets.yml
   roles:
     - oscheck
-    - install
-    - asus
-    - game
-    - message
-    - downloadapp
-    - virtualbox
     - smb

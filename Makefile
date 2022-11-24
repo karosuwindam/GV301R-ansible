@@ -5,4 +5,5 @@ install:
 	$(ANSIBLE_CMD) install.yml $(ANSIBLE_OPSION)
 oscheck:
 	$(ANSIBLE_CMD) check.yml $(ANSIBLE_OPSION)
-
+smb:
+	$(ANSIBLE_CMD) install-smb.yml $(ANSIBLE_OPSION)
