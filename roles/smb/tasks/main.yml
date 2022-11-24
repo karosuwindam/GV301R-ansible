@@ -1,0 +1,4 @@
+- name: install samba
+  include: smb.yml
+  become: yes
+  become_method: sudo

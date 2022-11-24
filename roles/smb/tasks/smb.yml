@@ -1,0 +1,5 @@
+- name: install apt smb
+  apt:
+    update_cache: yes
+    name:
+    - samba
