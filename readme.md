@@ -12,10 +12,8 @@
 * Docker
 * NextCloud Desktop Client
 * virtualbox
-* asus setup
-
-未設定
 * Steam
+* asus setup
 
 ## 実行方法
 
