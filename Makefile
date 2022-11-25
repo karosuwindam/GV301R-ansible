@@ -11,3 +11,5 @@ game:
 	$(ANSIBLE_CMD) install-game.yml $(ANSIBLE_OPSION)
 message:
 	$(ANSIBLE_CMD) install-message.yml $(ANSIBLE_OPSION)
+app:
+	$(ANSIBLE_CMD) install-app.yml $(ANSIBLE_OPSION)
