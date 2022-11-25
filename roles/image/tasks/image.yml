@@ -1,0 +1,5 @@
+- name: install image tool
+  apt:
+    name:
+    - gimp
+    - inkscape

@@ -4,3 +4,4 @@
   roles:
     - oscheck
     - game
+    - image
