@@ -1,0 +1,4 @@
+- name: install Image Tool
+  include:  ./image.yml
+  become: yes
+  become_method: sudo

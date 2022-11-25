@@ -3,5 +3,4 @@
     - vars/all/secrets.yml
   roles:
     - oscheck
-    - game
-  
+    - downloadapp
