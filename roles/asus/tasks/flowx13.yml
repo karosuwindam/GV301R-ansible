@@ -20,4 +20,13 @@
   become: yes
   become_method: sudo
   when: "'ROG Flow X13' in check_hard.stdout and not asus_flow_x13.stat.exists"
+- name: firefox setup touch
+  lineinfile:
+    path: /etc/security/pam_env.conf
+    regexp: '^MOZ_USE_XINPUT2 DEFAULT='
+    line: 'MOZ_USE_XINPUT2 DEFAULT=1'
+  become: yes
+  become_method: sudo
+  when: "'ROG Flow X13' in check_hard.stdout"
+  
   

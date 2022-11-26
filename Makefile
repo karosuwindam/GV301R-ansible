@@ -13,3 +13,5 @@ message:
 	$(ANSIBLE_CMD) install-message.yml $(ANSIBLE_OPSION)
 app:
 	$(ANSIBLE_CMD) install-app.yml $(ANSIBLE_OPSION)
+asus:
+	$(ANSIBLE_CMD) install-asus.yml $(ANSIBLE_OPSION)
