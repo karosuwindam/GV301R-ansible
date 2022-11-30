@@ -15,3 +15,5 @@ app:
 	$(ANSIBLE_CMD) install-app.yml $(ANSIBLE_OPSION)
 asus:
 	$(ANSIBLE_CMD) install-asus.yml $(ANSIBLE_OPSION)
+basetest:
+	$(ANSIBLE_CMD) install_base.yml $(ANSIBLE_OPSION)
