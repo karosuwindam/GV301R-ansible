@@ -1,2 +1,4 @@
-- name: add repo
 - name: install onedrive
+  apt:
+    name:
+    - onedrive
