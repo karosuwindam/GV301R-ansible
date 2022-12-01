@@ -2,3 +2,5 @@
   apt:
     name:
     - onedrive
+  become: yes
+  become_method: sudo

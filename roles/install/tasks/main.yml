@@ -17,3 +17,6 @@
   include: ./docker.yml
   become: yes
   become_method: sudo
+
+- name: onedrive
+  include: ./onedrive.yml
