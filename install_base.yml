@@ -1,0 +1,6 @@
+- hosts: localhost
+  vars_files:
+    - vars/all/secrets.yml
+  roles:
+    - oscheck
+    - install

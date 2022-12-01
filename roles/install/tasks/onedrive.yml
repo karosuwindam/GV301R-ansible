@@ -1,0 +1,6 @@
+- name: install onedrive
+  apt:
+    name:
+    - onedrive
+  become: yes
+  become_method: sudo
