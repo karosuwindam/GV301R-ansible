@@ -19,6 +19,7 @@
 * GSreamer
 * gimp
 * inkscape
+* mkvtoolnix
 
 ## 実行方法
 
