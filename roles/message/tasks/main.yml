@@ -8,5 +8,5 @@
   become_method: sudo
 - name: discord
   include: ./discord.yml
-  become: yes
-  become_method: sudo
+#   become: yes
+#   become_method: sudo
