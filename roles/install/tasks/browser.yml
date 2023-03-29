@@ -15,3 +15,9 @@
     name: "google-chrome-stable"
     state: latest
     update_cache: true
+
+- name: Install Tor Browser
+  apt:
+    name: "torbrowser-launcher"
+    state: latest
+    update_cache: true

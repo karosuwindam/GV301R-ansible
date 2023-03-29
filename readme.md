@@ -7,6 +7,7 @@
 * Zoom
 * Discode
 * Chrome
+* Tor Browser
 * vlc
 * Golang
 * onedrive

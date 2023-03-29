@@ -8,8 +8,8 @@
   become: yes
   become_method: sudo
 
-- name: chrome
-  include: ./chrome.yml
+- name: browser
+  include: ./browser.yml
   become: yes
   become_method: sudo
 
